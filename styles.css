@@ -69,4 +69,13 @@
     border-radius: 8px;
     font-weight: bold;
   }
-  
+
+footer {
+    text-align: center; /* Centra el texto en el footer */
+    padding: 20px; /* Espaciado interior */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    color: #fff; /* Color de texto blanco */
+    position: relative; /* Para que se alinee correctamente */
+    bottom: 0; /* Mantenerlo en la parte inferior */
+    width: 100%; /* Ancho completo */
+}
