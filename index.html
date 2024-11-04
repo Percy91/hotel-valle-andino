@@ -4,12 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- ETIQUETA PARA ENLAZAR NUESTRO ARCHIVO CSS -->
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <!-- MENU DE NAVEGACION -->
     <header>
       <!-- LOGO DE LA EMPRESA -->
-      <img src="" alt="" />
+      <img
+        width="160"
+        src="logo.png"
+        alt=""
+      />
       <!-- ETIQUETA PARA CREAR UN MENU DE NAVEGACION -->
       <nav>
         <!-- LISTA NO ORDENADA -->
@@ -20,22 +26,107 @@
             <a href="">Home</a>
           </li>
           <li>
-            <a href="">About Us</a>
+            <a href="">About us</a>
           </li>
           <li>
             <a href="">Rooms</a>
           </li>
           <li>
             <a href="">Galery</a>
-          </li>
-          
+          </li>          
         </ul>
       </nav>
     </header>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+      <!-- ETIQUETA PARA CREAR UN CONTENEDOR -->
+      <div class="hero">
+        <div>
+          <h1>Valle Andino Lodge</h1>
+          <p>
+            Discover the majesty of the Sacred Valley of the Incas in our cozy lodge, VALLE ANDINO. Located in the heart of Urubamba, in the Cusco region, we invite you to experience and immerse yourself in the natural beauty and rich cultural heritage of this ancestral land.
+          </p>
+          <a class="btn-inicio" href="">Book your stay now</a>
+        </div>
+      </div>
+    </main>
+
+
+
+  <!--   <section>
+      <a href="./interactivo.html"></a>
+
+      
+    </section> -->
+
+     <!-- FOOTER -->
+     <footer>
+      <p>Este sitio está desarrollado por: Percy Huaman</p>
+    </footer>
+
+
+
+
+    <script>
+          // vamos a solicitar un color al usuario
+          const colorDeFondo = prompt("Hola usuario, por favor escribe un color en ingles")
+      ;
+
+      console.log(colorDeFondo);
+      // para poder modificar el color del fondo
+      document.body.style.backgroundColor = colorDeFondo;
+
+      //Peso en la luna, (PESO / 9.81) *1.62
+      const peso = prompt("Ingresa tu peso en la tierra: ")
+      //como pronto nos retrona un string debemos convertir peso a number
+      // parseInt(peso) -> convierte a numeros enteros
+      // parseFloat(peso) -> convierte a numeros decimales
+      // Number(peso) -> 
+
+      const resultado = (Number(peso) / 9.81) * 1.62;
+      //alert
+      alert("Tu peso en la luna es: " + resultado.toFixed(2) + " Kg")
+
+     // console.log(peso);
+      
+     // Función que recibe el día y el mes, y devuelve el signo zodiacal correspondiente.
+function getZodiacSign(day, month) {
+  // Estructura condicional para determinar el signo del zodiaco según el día y el mes.
+  if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) return "Acuario";
+  // || es el operador lógico OR, que devuelve verdadero si alguna de las condiciones es verdadera.
+  else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) return "Piscis";
+  else if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) return "Aries";
+  else if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) return "Tauro";
+  else if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) return "Géminis";
+  else if ((month == 6 && day >= 21) || (month == 7 && day <= 22)) return "Cáncer";
+  else if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) return "Leo";
+  else if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) return "Virgo";
+  else if ((month == 9 && day >= 23) || (month == 10 && day <= 22)) return "Libra";
+  else if ((month == 10 && day >= 23) || (month == 11 && day <= 21)) return "Escorpio";
+  else if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) return "Sagitario";
+  else if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) return "Capricornio";
+  else return "Fecha no válida"; // Retorna un mensaje si la fecha no es válida.
+}
+
+// Solicita al usuario que ingrese su fecha de nacimiento en formato "DD/MM".
+const dateOfBirth = prompt("Ingrese su fecha de nacimiento en formato DD/MM:");
+// prompt() muestra una ventana emergente que solicita al usuario ingresar un dato.
+// El valor ingresado se guarda en la variable `dateOfBirth` como una cadena de texto.
+
+// Divide la cadena ingresada por el usuario en día y mes.
+// split("/") divide la cadena en un array usando "/" como separador.
+const [day, month] = dateOfBirth.split("/").map(Number);
+// split("/") devuelve un array con dos elementos: el día en la posición 0 y el mes en la posición 1.
+// map(Number) convierte cada elemento del array en un número. Así, `day` y `month` serán números enteros.
+
+// Llama a la función getZodiacSign con el día y el mes obtenidos para calcular el signo zodiacal.
+const zodiacSign = getZodiacSign(day, month);
+
+// Muestra el resultado en una alerta.
+// alert() muestra una ventana emergente con el mensaje especificado.
+alert(`Tu signo del zodiaco es: ${zodiacSign}`);
+// Las comillas invertidas `` permiten usar la sintaxis de plantillas de cadena para insertar variables (`${zodiacSign}`).
+
+    </script>
   </body>
-  <!-- FOOTER -->
-<footer>
-    <p>Este sitio está desarrollado por: Percy Huaman</p>
-</footer>
-  
 </html>
